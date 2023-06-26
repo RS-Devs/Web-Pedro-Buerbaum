@@ -2,6 +2,12 @@ import bgWaves from "./assets/video/bgWaves.mp4";
 import { FaYoutube, FaPodcast, FaInstagram, FaTiktok } from "react-icons/fa";
 import "animate.css";
 
+import pedro from "./assets/img/social-media/pedro.webp";
+import worldcast from "./assets/img/social-media/worldcast.webp";
+
+
+
+
 const SocialMediaSection = () => {
   return (
     <div
@@ -26,7 +32,7 @@ const SocialMediaSection = () => {
         >
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slow"
-            src="./src/assets/img/social-media/pedro.webp"
+            src={pedro}
             alt="Youtube"
           />
           <FaYoutube className="text-white text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slower" />
@@ -60,7 +66,7 @@ const SocialMediaSection = () => {
         >
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow"
-            src="./src/assets/img/social-media/worldcast.webp"
+            src={worldcast}
             alt="Podcast"
           />
           <FaPodcast className="text-white text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-3s animate__slow" />
@@ -94,7 +100,7 @@ const SocialMediaSection = () => {
         >
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-3s animate__slow"
-            src="./src/assets/img/social-media/pedro.webp"
+            src={pedro}
             alt="Instagram"
           />
           <FaInstagram className="text-white text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-4s animate__slow" />
@@ -128,7 +134,7 @@ const SocialMediaSection = () => {
         >
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-black animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s"
-            src="./src/assets/img/social-media/pedro.webp"
+            src={pedro}
             alt="TikTok"
           />
           <FaTiktok className="text-black text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow" />

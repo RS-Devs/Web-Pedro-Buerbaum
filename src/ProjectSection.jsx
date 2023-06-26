@@ -7,9 +7,27 @@ import {
   FaVolumeUp,
 } from "react-icons/fa";
 import bgWaves from "./assets/video/bgWaves.mp4";
+
+
+import lapolleria from "./assets/img/projects/lapolleria.webp";
+import laconeria from "./assets/img/projects/laconeria.webp";
+import thecockery from "./assets/img/projects/thecockery.webp";
+import fulkon from "./assets/img/projects/fulkon.webp";
+import worldcast from "./assets/img/projects/worldcast.webp";
+import Origen from "./assets/img/projects/Origen.webp";
+
+import lapolleria2 from "./assets/img/modals/lapolleria2.webp";
+import laconeria2 from "./assets/img/modals/laconeria2.webp";
+import thecockery2 from "./assets/img/modals/thecockery2.webp";
+import fulkon2 from "./assets/img/modals/fulkon2.webp";
+import worldcast2 from "./assets/img/modals/worldcast2.webp";
+import VideoPedroBuerbaum from "./assets/video/modal/VideoPedroBuerbaum.mp4";
+
+import cerrar from "./assets/img/modals/icons/cerrar.webp";
+
+
 import "animate.css";
 import { useState } from "react";
-import VideoPedroBuerbaum from "./assets/video/modal/VideoPedroBuerbaum.mp4";
 
 const ProjectsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -119,7 +137,7 @@ const ProjectsSection = () => {
 
       <div className="bg-pink-200 border-2 border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInLeft   animate__slow">
         <img
-          src="./src/assets/img/projects/lapolleria.webp"
+          src={lapolleria}
           alt="La Pollería"
           className="w-24 h-24 rounded-full mb-4 border-2 border-black animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slow"
         />
@@ -165,7 +183,7 @@ const ProjectsSection = () => {
       </div>
       <div className="bg-blue-200 border-2 border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInRight animate__delay-1s  animate__slow">
         <img
-          src="./src/assets/img/projects/laconeria.webp"
+          src={laconeria}
           alt="La Coñería"
           className="w-24 h-24 rounded-full mb-4 border-2 border-black animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow"
         />
@@ -212,7 +230,7 @@ const ProjectsSection = () => {
       </div>
       <div className="bg-pink-300 border-2 border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInLeft animate__delay-2s  animate__slow">
         <img
-          src="./src/assets/img/projects/thecockery.webp"
+          src={thecockery}
           alt="The Cockery"
           className="w-24 h-24 rounded-full mb-4 border-2 border-black animate__animated animate__fadeIn animate__fadeInDown animate__delay-3s animate__slow"
         />
@@ -259,7 +277,7 @@ const ProjectsSection = () => {
       </div>
       <div className="bg-gray-700 border-2 border-white text-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInRight animate__delay-3s  animate__slow">
         <img
-          src="./src/assets/img/projects/fulkon.webp"
+          src={fulkon}
           alt="Fulkon svp"
           className="w-24 h-24 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-4s animate__slow"
         />
@@ -305,7 +323,7 @@ const ProjectsSection = () => {
       </div>
       <div className="bg-black text-white border-2 border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInLeft animate__delay-4s  animate__slow">
         <img
-          src="./src/assets/img/projects/worldcast.webp"
+          src={worldcast}
           alt="WORLDCA$T"
           className="w-24 h-24 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow"
         />
@@ -350,7 +368,7 @@ const ProjectsSection = () => {
       </div>
       <div className="bg-gray-600 border-2 text-white border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInRight animate__delay-5s  animate__slow">
         <img
-          src="./src/assets/img/projects/0.0Origen.webp"
+          src={Origen}
           alt="NO SUSPIRES"
           className="w-24 h-24 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow"
         />
@@ -425,7 +443,7 @@ const ProjectsSection = () => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <img
-                src="./src/assets/img/modals/icons/cerrar.webp"
+                src={cerrar}
                 className="h-7 w-7"
               />
             </button>
@@ -433,7 +451,7 @@ const ProjectsSection = () => {
               La Pollería
             </h2>
             <img
-              src="/src/assets/img/modals/la-polleria-fachada.webp"
+              src={lapolleria2}
               alt="La Pollería"
               className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
               style={{ maxWidth: "300px" }}
@@ -498,13 +516,13 @@ const ProjectsSection = () => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <img
-                src="./src/assets/img/modals/icons/cerrar.webp"
+                src={cerrar}
                 className="h-7 w-7"
               />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">La Coñería</h2>
             <img
-              src="/src/assets/img/modals/la-coneria-fachada.webp"
+              src={laconeria2}
               alt="La Coñería"
               className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
               style={{ maxWidth: "300px" }}
@@ -564,7 +582,7 @@ const ProjectsSection = () => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <img
-                src="./src/assets/img/modals/icons/cerrar.webp"
+                src={cerrar}
                 className="h-7 w-7"
               />
             </button>
@@ -572,7 +590,7 @@ const ProjectsSection = () => {
               The Cockery
             </h2>
             <img
-              src="/src/assets/img/modals/thecockery.webp"
+              src={thecockery2}
               alt="The Cockery"
               className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
               style={{ maxWidth: "300px" }}
@@ -631,13 +649,13 @@ const ProjectsSection = () => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <img
-                src="./src/assets/img/modals/icons/cerrar.webp"
+                src={cerrar}
                 className="h-7 w-7"
               />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">FULKON</h2>
             <img
-              src="/src/assets/img/modals/FULKON.webp"
+              src={fulkon2}
               alt="FULKON"
               className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
               style={{ maxWidth: "400px" }}
@@ -695,13 +713,13 @@ const ProjectsSection = () => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <img
-                src="./src/assets/img/modals/icons/cerrar.webp"
+                src={cerrar}
                 className="h-7 w-7"
               />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">WORLDCA$T</h2>
             <img
-              src="/src/assets/img/modals/worldcast.webp"
+              src={worldcast2}
               alt="The Cockery"
               className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
               style={{ maxWidth: "400px" }}
@@ -773,7 +791,7 @@ const ProjectsSection = () => {
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <img
-                src="./src/assets/img/modals/icons/cerrar.webp"
+                src={cerrar}
                 className="h-7 w-7"
               />
             </button>

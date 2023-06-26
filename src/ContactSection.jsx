@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import bgWaves from "./assets/video/bgWaves.mp4";
 import "animate.css";
 
+
+import contact from './assets/img/contact/contact.webp'
+
+
+
 const MAX_FORM_SIZE = 500;
 
 const ContactSection = () => {
@@ -123,7 +128,7 @@ const ContactSection = () => {
       <div className="rounded-lg shadow p-8 z-10">
         <div className="flex flex-col items-center justify-center mb-8">
           <img
-            src="./src/assets/img/contact/contact.webp"
+            src={contact}
             alt="Imagen de contacto"
             className="w-48 h-48 rounded-full border-4 border-white animate__animated animate__fadeInDown animate__slow"
           />

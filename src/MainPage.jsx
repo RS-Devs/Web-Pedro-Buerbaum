@@ -1,5 +1,7 @@
 import bgWaves from "./assets/video/bgWaves.mp4";
+import pedro from "./assets/img/pedro.webp";
 import "animate.css";
+
 
 const MainPage = () => {
   return (
@@ -14,7 +16,7 @@ const MainPage = () => {
 
       <div className="absolute flex flex-col items-center max-w-3xl text-center px-4 z-9">
         <img
-          src="./src/assets/img/pedro.webp"
+          src={pedro}
           alt="Foto de Pedro Buerbaum"
           className="w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/2 h-auto rounded-full mb-8 animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slow"
         />
