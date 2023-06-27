@@ -117,7 +117,7 @@ const ContactSection = () => {
   }, [errorMessages]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen" style={{ overflowY: "auto", position: "relative" }}>
       <video
         src={bgWaves}
         autoPlay
@@ -125,7 +125,7 @@ const ContactSection = () => {
         loop
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
-      <div className="rounded-lg shadow p-8 z-10">
+      <div className="rounded-lg shadow p-8 z-10 w-full max-w-md">
         <div className="flex flex-col items-center justify-center mb-8">
           <img
             src={contact}
@@ -133,12 +133,16 @@ const ContactSection = () => {
             className="w-48 h-48 rounded-full border-4 border-white animate__animated animate__fadeInDown animate__slow"
           />
         </div>
-        <h2 className="text-4xl mb-6 text-white font-bold text-center animate__animated animate__fadeInDown  animate__delay-1s animate__slow">
+        <h2 className="text-4xl mb-6 text-white font-bold text-center animate__animated animate__fadeInDown animate__delay-1s animate__slow">
           Contacto
         </h2>
-        <form method="POST" onSubmit={handleSubmit} className="">
-          <div className="mb-4 animate__animated animate__fadeInDown  animate__delay-2s animate__slow">
-            <label htmlFor="name" name="name" className="text-lg text-white">
+        <form
+          method="POST"
+          onSubmit={handleSubmit}
+          className="flex flex-col space-y-4"
+        >
+          <div className="animate__animated animate__fadeInDown animate__delay-2s animate__slow">
+            <label htmlFor="name" className="text-lg text-white">
               Nombre:
             </label>
             <input
@@ -151,8 +155,8 @@ const ContactSection = () => {
             />
             <span className="text-red-500"></span>
           </div>
-          <div className="mb-4 animate__animated animate__fadeInDown  animate__delay-3s animate__slow">
-            <label htmlFor="email" name="email" className="text-lg text-white">
+          <div className="animate__animated animate__fadeInDown animate__delay-3s animate__slow">
+            <label htmlFor="email" className="text-lg text-white">
               Correo electrónico:
             </label>
             <input
@@ -165,8 +169,8 @@ const ContactSection = () => {
             />
             <span className="text-red-500"></span>
           </div>
-          <div className="mb-4 animate__animated animate__fadeInDown  animate__delay-4s animate__slow">
-            <label htmlFor="message" name="message" className="text-lg text-white">
+          <div className="animate__animated animate__fadeInDown animate__delay-4s animate__slow">
+            <label htmlFor="message" className="text-lg text-white">
               Mensaje:
             </label>
             <textarea
@@ -176,19 +180,14 @@ const ContactSection = () => {
               required
             ></textarea>
           </div>
-          <div className="text-center animate__animated animate__fadeInDown  animate__delay-5s animate__slow">
+          <div className="text-center animate__animated animate__fadeInDown animate__delay-5s animate__slow">
             <button
               type="submit"
               className="bg-gray-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full"
             >
               Enviar
             </button>
-
-
-            
           </div>
-
-          
         </form>
       </div>
       {modalVisible && (
@@ -204,6 +203,7 @@ const ContactSection = () => {
       )}
     </div>
   );
+  
 };
 
 export default ContactSection;

@@ -5,9 +5,6 @@ import "animate.css";
 import pedro from "./assets/img/social-media/pedro.webp";
 import worldcast from "./assets/img/social-media/worldcast.webp";
 
-
-
-
 const SocialMediaSection = () => {
   return (
     <div
@@ -161,6 +158,43 @@ const SocialMediaSection = () => {
             </button>
           </div>
         </div>
+
+        <div
+          className="bg-blue-500 z-10 p-4 rounded-full shadow-md flex flex-col items-center border-2 border-white animate__animated animate__fadeIn animate__fadeInLeft animate__delay-5s"
+          style={{ boxShadow: "0 0 30px #ffffff" }}
+        >
+          <img
+            className="w-20 h-20 rounded-full mb-4 border-2 border-black animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s"
+            src={pedro}
+            alt="TikTok"
+          />
+          <FaTiktok className="text-black text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow" />
+          <div className="text-center">
+            <a
+              className="text-blue-500 hover:underline bg-red-500 animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slower"
+              href="https://www.tiktok.com/@pedrobuerbaum"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @pedrobuerbaum
+            </a>
+            <p className="text-black font-bold p-5 animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slow">
+              Sigue mi perfil de TikTok para ver videos cortos y entretenidos.
+            </p>
+            <button className="mt-2 bg-red-500 border-2 border-black hover:bg-red-600 hover:scale-110 text-white font-bold py-2 px-4 rounded-full animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower">
+              <a
+                href="https://www.tiktok.com/@pedrobuerbaum"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Seguir
+              </a>
+            </button>
+          </div>
+        </div>
+
+        
+
       </div>
     </div>
   );
