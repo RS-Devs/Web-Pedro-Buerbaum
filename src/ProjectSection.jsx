@@ -29,6 +29,18 @@ import cerrar from "./assets/img/modals/icons/cerrar.png";
 import "animate.css";
 import { useState } from "react";
 
+
+
+
+
+import VideoPlayer from "./VideoPlayer";
+
+
+
+
+
+
+
 const ProjectsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
@@ -44,6 +56,9 @@ const ProjectsSection = () => {
   const [isClosingFifthModal, setIsClosingFifthModal] = useState(false);
   const [isClosingSixthModal, setIsClosingSixthModal] = useState(false);
 
+
+  
+  
 
 
 
@@ -801,14 +816,8 @@ const ProjectsSection = () => {
               NO SUSPIRES
             </h2>
 
-            <video
-              src={VideoPedroBuerbaum}
-              autoPlay
-              loop
-              muted
-              className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
-              style={{ maxWidth: "400px" }}
-            />
+            <VideoPlayer src={VideoPedroBuerbaum} />
+
             <p className="mb-2 mx-auto sm:text-center">
               El evento que cambiará tu vida.
             </p>

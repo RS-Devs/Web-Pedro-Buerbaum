@@ -49,7 +49,9 @@ const MainPage = () => {
         autoPlay
         muted
         loop
-        className={`absolute bottom-0 top-0 left-0 w-full h-full object-cover z-0 ${videoLoaded ? '' : 'hidden'}`}
+        className={`absolute bottom-0 top-0 left-0 w-full h-full object-cover z-0 ${
+          videoLoaded ? "" : "hidden"
+        }`}
         onLoadedData={handleVideoLoad}
       />
 
@@ -66,10 +68,11 @@ const MainPage = () => {
 
           <button
             onClick={openModal}
-            className="bg-white text-black font-bold py-2 px-4 rounded-full border-4 border-gray-900 mb-4 animate__animated animate__fadeInDown animate__delay-4s animate__slow"
+            className="bg-white text-black font-bold py-2 px-4 rounded-full border-4 border-gray-900 mb-4 animate__animated animate__fadeInDown animate__delay-4s animate__slow hover:bg-gray-900 hover:text-white hover:border-white"
           >
             Conóceme
           </button>
+
           {modalOpen && (
             <div className="fixed inset-0 flex items-center justify-center z-20">
               <div
@@ -94,12 +97,26 @@ const MainPage = () => {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm sm:text-base lg:text-lg bg-black mb-2 text-justify animate__animated animate__fadeInDown animate__delay1s animate__slow">
-                    Soy Pedro Buerbaum, un emprendedor apasionado e incansable por naturaleza. A lo largo de mi trayectoria, he tenido el privilegio de fundar negocios en diversos ámbitos, lo cual me ha brindado una perspectiva amplia y me ha exigido ser altamente versátil. Durante este recorrido, he descubierto que el cuidado personal, tanto interno como externo, es la clave fundamental para alcanzar el éxito en todas las áreas de la vida.
+                    Soy Pedro Buerbaum, un emprendedor apasionado e incansable
+                    por naturaleza. A lo largo de mi trayectoria, he tenido el
+                    privilegio de fundar negocios en diversos ámbitos, lo cual
+                    me ha brindado una perspectiva amplia y me ha exigido ser
+                    altamente versátil. Durante este recorrido, he descubierto
+                    que el cuidado personal, tanto interno como externo, es la
+                    clave fundamental para alcanzar el éxito en todas las áreas
+                    de la vida.
                   </p>
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm sm:text-base lg:text-lg bg-black mb-4 text-justify animate__animated animate__fadeInDown animate__delay-2s animate__slow">
-                    En mi contenido, puedes esperar una orientación centrada en el emprendimiento, las finanzas, la productividad, el bienestar y el estilo de vida. Estaré encantado de compartir conocimientos, consejos y recursos para ayudarte a alcanzar tus metas y encontrar el equilibrio necesario para prosperar en todos los aspectos de tu vida. ¡Acompáñame en este apasionante viaje hacia el crecimiento personal y profesional!
+                    En mi contenido, puedes esperar una orientación centrada en
+                    el emprendimiento, las finanzas, la productividad, el
+                    bienestar y el estilo de vida. Estaré encantado de compartir
+                    conocimientos, consejos y recursos para ayudarte a alcanzar
+                    tus metas y encontrar el equilibrio necesario para prosperar
+                    en todos los aspectos de tu vida. ¡Acompáñame en este
+                    apasionante viaje hacia el crecimiento personal y
+                    profesional!
                   </p>
                 </div>
                 <div className="flex justify-end">

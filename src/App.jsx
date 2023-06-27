@@ -65,7 +65,7 @@ const App = () => {
               >
                 Redes
               </button>
-              {/* Agregar el botón de contacto */}
+
               <button
                 className={`p-2 rounded-full ${
                   currentPage === "contact"
@@ -92,4 +92,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; 
