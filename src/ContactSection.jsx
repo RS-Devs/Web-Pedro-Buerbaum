@@ -3,7 +3,7 @@ import bgWaves from "./assets/video/bgWaves.mp4";
 import "animate.css";
 
 
-import contact from './assets/img/contact/contact.webp'
+import contact from './assets/img/contact/contact.png'
 
 
 

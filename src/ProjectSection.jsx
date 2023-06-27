@@ -9,21 +9,21 @@ import {
 import bgWaves from "./assets/video/bgWaves.mp4";
 
 
-import lapolleria from "./assets/img/projects/lapolleria.webp";
-import laconeria from "./assets/img/projects/laconeria.webp";
-import thecockery from "./assets/img/projects/thecockery.webp";
-import fulkon from "./assets/img/projects/fulkon.webp";
-import worldcast from "./assets/img/projects/worldcast.webp";
-import Origen from "./assets/img/projects/Origen.webp";
+import lapolleria from "./assets/img/projects/lapolleria.png";
+import laconeria from "./assets/img/projects/laconeria.png";
+import thecockery from "./assets/img/projects/thecockery.png";
+import fulkon from "./assets/img/projects/fulkon.png";
+import worldcast from "./assets/img/projects/worldcast.png";
+import Origen from "./assets/img/projects/Origen.png";
 
-import lapolleria2 from "./assets/img/modals/lapolleria2.webp";
-import laconeria2 from "./assets/img/modals/laconeria2.webp";
-import thecockery2 from "./assets/img/modals/thecockery2.webp";
-import fulkon2 from "./assets/img/modals/fulkon2.webp";
-import worldcast2 from "./assets/img/modals/worldcast2.webp";
+import lapolleria2 from "./assets/img/modals/lapolleria2.png";
+import laconeria2 from "./assets/img/modals/laconeria2.png";
+import thecockery2 from "./assets/img/modals/thecockery2.png";
+import fulkon2 from "./assets/img/modals/fulkon2.png";
+import worldcast2 from "./assets/img/modals/worldcast2.png";
 import VideoPedroBuerbaum from "./assets/video/modal/VideoPedroBuerbaum.mp4";
 
-import cerrar from "./assets/img/modals/icons/cerrar.webp";
+import cerrar from "./assets/img/modals/icons/cerrar.png";
 
 
 import "animate.css";

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import bgWaves from "./assets/video/bgWaves.mp4";
-import pedro from "./assets/img/pedro.webp";
-import pedroSmoke from "./assets/img/pedroSmoke.webp";
+import pedro from "./assets/img/pedro.png";
+import pedroSmoke from "./assets/img/pedroSmoke.png";
 import "animate.css";
 
 const MainPage = () => {
