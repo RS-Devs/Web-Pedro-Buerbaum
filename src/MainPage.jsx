@@ -58,15 +58,15 @@ const MainPage = () => {
           <img
             src={pedro}
             alt="Foto de Pedro Buerbaum"
-            className="w-48 mb-14 md:w-64 lg:w-80 h-auto rounded-full animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slow"
+            className="w-48 mb-14 md:w-64 lg:w-80 h-auto rounded-full animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow"
           />
-          <h1 className="text-3xl mb-10 bg-black sm:text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-2s animate__slow">
+          <h1 className="text-3xl mb-10 bg-black sm:text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-3s animate__slow">
             Pedro Buerbaum
           </h1>
 
           <button
             onClick={openModal}
-            className="bg-white text-black font-bold py-2 px-4 rounded-full border-4 border-gray-900 mb-4 animate__animated animate__fadeInDown animate__delay-3s animate__slow"
+            className="bg-white text-black font-bold py-2 px-4 rounded-full border-4 border-gray-900 mb-4 animate__animated animate__fadeInDown animate__delay-4s animate__slow"
           >
             Conóceme
           </button>
