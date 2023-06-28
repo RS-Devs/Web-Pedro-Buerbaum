@@ -118,7 +118,7 @@ const ContactSection = () => {
     >
       <BackgroundVideo />
 
-      <div className="rounded-lg shadow p-8 z-10 w-full max-w-md ">
+      <div className="rounded-lg p-8 z-10 w-full max-w-md ">
         <div className="flex flex-col items-center justify-center mb-8 ">
           <img
             src={contact}
