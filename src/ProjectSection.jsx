@@ -6,8 +6,8 @@ import {
   FaEye,
   FaVolumeUp,
 } from "react-icons/fa";
-import bgWaves from "./assets/video/bgWaves.mp4";
 
+import BackgroundVideo from "./BackgroundVideo";
 
 import lapolleria from "./assets/img/projects/lapolleria.png";
 import laconeria from "./assets/img/projects/laconeria.png";
@@ -25,21 +25,10 @@ import VideoPedroBuerbaum from "./assets/video/modal/VideoPedroBuerbaum.mp4";
 
 import cerrar from "./assets/img/modals/icons/cerrar.png";
 
-
 import "animate.css";
 import { useState } from "react";
 
-
-
-
-
 import VideoPlayer from "./VideoPlayer";
-
-
-
-
-
-
 
 const ProjectsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,12 +45,6 @@ const ProjectsSection = () => {
   const [isClosingFifthModal, setIsClosingFifthModal] = useState(false);
   const [isClosingSixthModal, setIsClosingSixthModal] = useState(false);
 
-
-  
-  
-
-
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -71,7 +54,7 @@ const ProjectsSection = () => {
     setTimeout(() => {
       setIsModalOpen(false);
       setIsClosingModal(false);
-    }, 1000); 
+    }, 1000);
   };
 
   const openSecondModal = () => {
@@ -83,9 +66,8 @@ const ProjectsSection = () => {
     setTimeout(() => {
       setIsSecondModalOpen(false);
       setIsClosingSecondModal(false);
-    }, 1000); 
+    }, 1000);
   };
-  
 
   const openThirdModal = () => {
     setIsThirdModalOpen(true);
@@ -96,9 +78,9 @@ const ProjectsSection = () => {
     setTimeout(() => {
       setIsThirdModalOpen(false);
       setIsClosingThirdModal(false);
-    }, 1000); 
+    }, 1000);
   };
-  
+
   const openFourthModal = () => {
     setIsFourthModalOpen(true);
   };
@@ -108,9 +90,8 @@ const ProjectsSection = () => {
     setTimeout(() => {
       setIsFourthModalOpen(false);
       setIsClosingFourthModal(false);
-    }, 1000); 
+    }, 1000);
   };
-  
 
   const openFifthModal = () => {
     setIsFifthModalOpen(true);
@@ -121,9 +102,8 @@ const ProjectsSection = () => {
     setTimeout(() => {
       setIsFifthModalOpen(false);
       setIsClosingFifthModal(false);
-    }, 1000); 
+    }, 1000);
   };
-  
 
   const openSixthModal = () => {
     setIsSixthModalOpen(true);
@@ -134,21 +114,15 @@ const ProjectsSection = () => {
     setTimeout(() => {
       setIsSixthModalOpen(false);
       setIsClosingSixthModal(false);
-    }, 1000); 
+    }, 1000);
   };
-  
+
   return (
     <div
       className="py-8 min-h-screen pt-14 grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-10 lg:px-20 relative"
       style={{ maxHeight: "100vh", overflowY: "auto", position: "relative" }}
     >
-      <video
-        src={bgWaves}
-        autoPlay
-        muted
-        loop
-        className="fixed top-0 left-0 w-full h-screen  object-cover z-0"
-      />
+      <BackgroundVideo />
 
       <div className="bg-pink-200 border-2 border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInLeft   animate__slow">
         <img
@@ -441,26 +415,22 @@ const ProjectsSection = () => {
       {/******** FIRST MODAL ********/}
 
       {isModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-10">
-    <div
-      className="bg-gray-900 bg-opacity-50 absolute inset-0"
-      onClick={closeModal}
-    ></div>
-    <div
-      className={`bg-pink-200 border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-        isClosingModal ? "animate__fadeOutDown" : "animate__fadeIn"
-      } animate__fadeInDown animate__slow`}
-      style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-    >
-      <button
-        onClick={closeModal}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-      >
-        <img
-          src={cerrar}
-          className="h-7 w-7"
-          alt="Cerrar"
-        />
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div
+            className="bg-gray-900 bg-opacity-50 absolute inset-0"
+            onClick={closeModal}
+          ></div>
+          <div
+            className={`bg-pink-200 border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+              isClosingModal ? "animate__fadeOutDown" : "animate__fadeIn"
+            } animate__fadeInDown animate__slow`}
+            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <img src={cerrar} className="h-7 w-7" alt="Cerrar" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
               La Pollería
@@ -515,26 +485,22 @@ const ProjectsSection = () => {
       {/******** SECOND MODAL ********/}
 
       {isSecondModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-10">
-    <div
-      className="bg-gray-900 bg-opacity-50 absolute inset-0"
-      onClick={closeSecondModal}
-    ></div>
-    <div
-      className={`bg-blue-200 border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-        isClosingSecondModal ? "animate__fadeOutDown" : "animate__fadeIn"
-      } animate__fadeInDown animate__slow`}
-      style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-    >
-      <button
-        onClick={closeSecondModal}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-      >
-        <img
-          src={cerrar}
-          className="h-7 w-7"
-          alt="Cerrar"
-        />
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div
+            className="bg-gray-900 bg-opacity-50 absolute inset-0"
+            onClick={closeSecondModal}
+          ></div>
+          <div
+            className={`bg-blue-200 border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+              isClosingSecondModal ? "animate__fadeOutDown" : "animate__fadeIn"
+            } animate__fadeInDown animate__slow`}
+            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
+          >
+            <button
+              onClick={closeSecondModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <img src={cerrar} className="h-7 w-7" alt="Cerrar" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">La Coñería</h2>
             <img
@@ -582,25 +548,22 @@ const ProjectsSection = () => {
       {/******** Third MODAL ********/}
 
       {isThirdModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-10">
-    <div
-      className="bg-gray-900 bg-opacity-50 absolute inset-0"
-      onClick={closeThirdModal}
-    ></div>
-    <div
-      className={`bg-pink-300 border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-        isClosingThirdModal ? "animate__fadeOutDown" : "animate__fadeIn"
-      } animate__fadeInDown animate__slow`}
-      style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-    >
-      <button
-        onClick={closeThirdModal}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-      >
-        <img
-          src={cerrar}
-          className="h-7 w-7"
-        />
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div
+            className="bg-gray-900 bg-opacity-50 absolute inset-0"
+            onClick={closeThirdModal}
+          ></div>
+          <div
+            className={`bg-pink-300 border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+              isClosingThirdModal ? "animate__fadeOutDown" : "animate__fadeIn"
+            } animate__fadeInDown animate__slow`}
+            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
+          >
+            <button
+              onClick={closeThirdModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <img src={cerrar} className="h-7 w-7" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
               The Cockery
@@ -649,25 +612,22 @@ const ProjectsSection = () => {
       {/******** FOURTH MODAL ********/}
 
       {isFourthModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-10">
-    <div
-      className="bg-gray-900 bg-opacity-50 absolute inset-0"
-      onClick={closeFourthModal}
-    ></div>
-    <div
-      className={`bg-gray-700 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-        isClosingFourthModal ? "animate__fadeOutDown" : "animate__fadeIn"
-      } animate__fadeInDown animate__slow`}
-      style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-    >
-      <button
-        onClick={closeFourthModal}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-      >
-        <img
-          src={cerrar}
-          className="h-7 w-7"
-        />
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div
+            className="bg-gray-900 bg-opacity-50 absolute inset-0"
+            onClick={closeFourthModal}
+          ></div>
+          <div
+            className={`bg-gray-700 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+              isClosingFourthModal ? "animate__fadeOutDown" : "animate__fadeIn"
+            } animate__fadeInDown animate__slow`}
+            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
+          >
+            <button
+              onClick={closeFourthModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <img src={cerrar} className="h-7 w-7" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">FULKON</h2>
             <img
@@ -713,25 +673,22 @@ const ProjectsSection = () => {
       {/******** FIFTH MODAL ********/}
 
       {isFifthModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-10">
-    <div
-      className="bg-gray-900 bg-opacity-50 absolute inset-0"
-      onClick={closeFifthModal}
-    ></div>
-    <div
-      className={`bg-black text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-        isClosingFifthModal ? "animate__fadeOutDown" : "animate__fadeIn"
-      } animate__fadeInDown animate__slow`}
-      style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-    >
-      <button
-        onClick={closeFifthModal}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-      >
-        <img
-          src={cerrar}
-          className="h-7 w-7"
-        />
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div
+            className="bg-gray-900 bg-opacity-50 absolute inset-0"
+            onClick={closeFifthModal}
+          ></div>
+          <div
+            className={`bg-black text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+              isClosingFifthModal ? "animate__fadeOutDown" : "animate__fadeIn"
+            } animate__fadeInDown animate__slow`}
+            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
+          >
+            <button
+              onClick={closeFifthModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <img src={cerrar} className="h-7 w-7" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">WORLDCA$T</h2>
             <img
@@ -791,25 +748,22 @@ const ProjectsSection = () => {
       {/******** SIXTH MODAL ********/}
 
       {isSixthModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-10">
-    <div
-      className="bg-gray-900 bg-opacity-50 absolute inset-0"
-      onClick={closeSixthModal}
-    ></div>
-    <div
-      className={`bg-gray-600 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-        isClosingSixthModal ? "animate__fadeOutDown" : "animate__fadeIn"
-      } animate__fadeInDown animate__slow`}
-      style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-    >
-      <button
-        onClick={closeSixthModal}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
-      >
-        <img
-          src={cerrar}
-          className="h-7 w-7"
-        />
+        <div className="fixed inset-0 flex items-center justify-center z-10">
+          <div
+            className="bg-gray-900 bg-opacity-50 absolute inset-0"
+            onClick={closeSixthModal}
+          ></div>
+          <div
+            className={`bg-gray-600 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+              isClosingSixthModal ? "animate__fadeOutDown" : "animate__fadeIn"
+            } animate__fadeInDown animate__slow`}
+            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
+          >
+            <button
+              onClick={closeSixthModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <img src={cerrar} className="h-7 w-7" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">0.0 Origen</h2>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">

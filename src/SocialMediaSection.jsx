@@ -1,4 +1,4 @@
-import bgWaves from "./assets/video/bgWaves.mp4";
+import BackgroundVideo from "./BackgroundVideo";
 import { FaYoutube, FaPodcast, FaInstagram, FaTiktok } from "react-icons/fa";
 import "animate.css";
 
@@ -11,13 +11,7 @@ const SocialMediaSection = () => {
       className="bg-gray-100 p-6 flex flex-col items-center "
       style={{ maxHeight: "100vh", overflowY: "auto", position: "relative" }}
     >
-      <video
-        src={bgWaves}
-        autoPlay
-        muted
-        loop
-        className="fixed top-0 left-0 w-full h-screen object-cover z-0"
-      />
+      <BackgroundVideo />
 
       <h3 className="text-4xl text-white font-bold mb-4 z-10 animate__animated animate__fadeInDown animate__slow">
         Redes Sociales
@@ -158,11 +152,6 @@ const SocialMediaSection = () => {
             </button>
           </div>
         </div>
-
-       
-       
-        
-
       </div>
     </div>
   );

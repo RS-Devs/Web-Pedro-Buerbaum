@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
-import bgWaves from "./assets/video/bgWaves.mp4";
+import BackgroundVideo from "./BackgroundVideo";
 import "animate.css";
 
-
-import contact from './assets/img/contact/contact.png'
-
-
+import contact from "./assets/img/contact/contact.png";
 
 const MAX_FORM_SIZE = 500;
 
@@ -92,9 +89,7 @@ const ContactSection = () => {
     // Establecer la URL de destino del formulario
     e.target.action = "https://formspree.io/f/mwkdeowj";
 
-
     e.target.submit();
-
 
     nameInput.value = "";
     emailInput.value = "";
@@ -117,17 +112,14 @@ const ContactSection = () => {
   }, [errorMessages]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen " 
-    style={{ minHeight: "100vh", overflowY: "auto", position: "relative" }}>
-      <video
-        src={bgWaves}
-        autoPlay
-        muted
-        loop
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      />
+    <div
+      className="flex flex-col items-center justify-center min-h-screen overflow-y-auto"
+      style={{ position: "relative" }}
+    >
+      <BackgroundVideo />
+
       <div className="rounded-lg shadow p-8 z-10 w-full max-w-md ">
-        <div className="flex flex-col items-center justify-center mb-8 " >
+        <div className="flex flex-col items-center justify-center mb-8 ">
           <img
             src={contact}
             alt="Imagen de contacto"
@@ -204,7 +196,6 @@ const ContactSection = () => {
       )}
     </div>
   );
-  
 };
 
 export default ContactSection;
