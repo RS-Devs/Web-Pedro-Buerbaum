@@ -43,13 +43,14 @@ const MainPage = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-transparent text-white overflow-auto">
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-transparent text-white overflow-auto" 
+    style={{ maxHeight: "100vh", overflowY: "auto", position: "relative" }}>
       <video
         src={bgWaves}
         autoPlay
         muted
         loop
-        className={`absolute bottom-0 top-0 left-0 w-full h-full object-cover z-0 ${
+        className={`fixed bottom-0 top-0 left-0 w-full h-full object-cover z-0 ${
           videoLoaded ? "" : "hidden"
         }`}
         onLoadedData={handleVideoLoad}
