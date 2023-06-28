@@ -113,8 +113,8 @@ const ContactSection = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen overflow-y-auto"
-      style={{ position: "relative" }}
+      className="p-6 flex flex-col items-center"
+      style={{ maxHeight: "100vh", overflowY: "auto", position: "relative" }}
     >
       <BackgroundVideo />
 

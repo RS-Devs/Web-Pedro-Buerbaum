@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import pedro from "./assets/img/pedro.png";
 import pedroSmoke from "./assets/img/pedroSmoke.png";
 import "animate.css";
@@ -7,6 +7,11 @@ import BackgroundVideo from "./BackgroundVideo";
 const MainPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [isClosingModal, setIsClosingModal] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    setVideoLoaded(true);
+  }, []);
 
   const openModal = () => {
     setModalOpen(true);
@@ -25,21 +30,27 @@ const MainPage = () => {
       className="relative flex flex-col items-center justify-center min-h-screen bg-transparent text-white overflow-auto"
       style={{ maxHeight: "100vh", overflowY: "auto", position: "relative" }}
     >
-      <BackgroundVideo />
+      {videoLoaded && <BackgroundVideo />}
 
       <div className="container mt-10 mx-auto h-screen flex flex-col items-center justify-center text-center z-10">
         <img
           src={pedro}
           alt="Foto de Pedro Buerbaum"
-          className="w-48 mb-14 md:w-64 lg:w-80 h-auto rounded-full animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow"
+          className={`w-48 mb-14 md:w-64 lg:w-80 h-auto rounded-full animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow ${
+            videoLoaded ? "" : "hidden"
+          }`}
         />
-        <h1 className="text-3xl mb-10 bg-black sm:text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-3s animate__slow">
+        <h1 className={`text-3xl mb-10 bg-black sm:text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-3s animate__slow ${
+            videoLoaded ? "" : "hidden"
+          }`}>
           Pedro Buerbaum
         </h1>
 
         <button
           onClick={openModal}
-          className="bg-white text-black font-bold py-2 mb-6 px-4 rounded-full border-4 border-gray-900 animate__animated animate__fadeInDown animate__delay-4s animate__slow hover:bg-gray-900 hover:text-white hover:border-white"
+          className={`bg-white text-black font-bold py-2 mb-6 px-4 rounded-full border-4 border-gray-900 animate__animated animate__fadeInDown animate__delay-4s animate__slow hover:bg-gray-900 hover:text-white hover:border-white ${
+            videoLoaded ? "" : "hidden"
+          }`}
         >
           Conóceme
         </button>
