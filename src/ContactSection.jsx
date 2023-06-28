@@ -123,7 +123,7 @@ const ContactSection = () => {
           <img
             src={contact}
             alt="Imagen de contacto"
-            className="w-48 h-48 rounded-full border-4 border-white animate__animated animate__fadeInDown animate__slow"
+            className="w-48 h-48 rounded-full border-4 border-white animate__animated animate__fadeInDown  animate__slow"
           />
         </div>
         <h2 className="text-4xl mb-6 text-white font-bold text-center animate__animated animate__fadeInDown animate__delay-1s animate__slow">
