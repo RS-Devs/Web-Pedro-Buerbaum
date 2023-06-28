@@ -117,16 +117,17 @@ const ContactSection = () => {
   }, [errorMessages]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen" style={{ overflowY: "auto", position: "relative" }}>
+    <div className="flex flex-col items-center justify-center min-h-screen " 
+    style={{ maxHeight: "100vh", overflowY: "auto", position: "relative" }}>
       <video
         src={bgWaves}
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="fixed top-0 left-0 w-full h-screen object-cover z-0"
       />
-      <div className="rounded-lg shadow p-8 z-10 w-full max-w-md">
-        <div className="flex flex-col items-center justify-center mb-8">
+      <div className="rounded-lg shadow p-8 z-10 w-full max-w-md ">
+        <div className="flex flex-col items-center justify-center mb-8 " >
           <img
             src={contact}
             alt="Imagen de contacto"
