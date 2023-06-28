@@ -1,4 +1,4 @@
-import  { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 import "animate.css";
 
 const MainPage = lazy(() => import("./MainPage"));
@@ -65,7 +65,6 @@ const App = () => {
               >
                 Redes
               </button>
-
               <button
                 className={`p-2 rounded-full ${
                   currentPage === "contact"
@@ -80,12 +79,11 @@ const App = () => {
           )}
         </div>
       </div>
-
-      <Suspense fallback={
-  <div className="flex items-center justify-center h-screen bg-black">
-    
-  </div>
-}>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center h-screen bg-black"></div>
+        }
+      >
         {currentPage === "main" && (
           <MainPage className="absolute top-0 left-0 w-full h-full z-0" />
         )}
