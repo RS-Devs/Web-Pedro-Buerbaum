@@ -1,4 +1,7 @@
 import { useState, lazy, Suspense } from "react";
+import { FaVolumeMute, FaVolumeUp, FaChevronDown } from "react-icons/fa";
+import audioFile from "./assets/audio/audio.mp3";
+
 import "animate.css";
 
 const MainPage = lazy(() => import("./MainPage"));
@@ -9,6 +12,8 @@ const ContactSection = lazy(() => import("./ContactSection"));
 const App = () => {
   const [currentPage, setCurrentPage] = useState("main");
   const [showButtons, setShowButtons] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [showVolumeControl, setShowVolumeControl] = useState(false);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -17,6 +22,23 @@ const App = () => {
 
   const handleMenuToggle = () => {
     setShowButtons(!showButtons);
+  };
+
+  const handleVolumeControlToggle = () => {
+    setIsMuted(!isMuted);
+    setShowVolumeControl(false);
+  };
+
+  const handleVolumeIconClick = () => {
+    if (isMuted) {
+      setShowVolumeControl(!showVolumeControl);
+    }
+  };
+
+  const handleVolumeChange = (event) => {
+    const newVolume = event.target.value / 100;
+    const audio = document.getElementById("audio");
+    audio.volume = newVolume;
   };
 
   return (
@@ -28,8 +50,29 @@ const App = () => {
         >
           Menu
         </button>
+        <div className="relative">
+          <button
+            className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:border-black mr-4 mt-4"
+            onClick={handleVolumeControlToggle}
+          >
+            {isMuted ? <FaVolumeUp size={20} /> : <FaVolumeMute size={20} />}
+          </button>
+          {isMuted && (
+            <div className="relative top-3 right-0 ">
+              <FaChevronDown
+                size={20}
+                onClick={handleVolumeIconClick}
+              />
+            </div>
+          )}
+        </div>
+        {isMuted && (
+          <audio id="audio" autoPlay>
+            <source src={audioFile} type="audio/mpeg" />
+          </audio>
+        )}
         <div
-          className={`absolute top-0 right-0 mt-4 mr-4 flex flex-col space-y-4 ${
+          className={`absolute top-0 right-0 mt-4 mr-4 ${
             showButtons ? "z-10" : "hidden"
           }`}
         >
@@ -78,6 +121,20 @@ const App = () => {
             </>
           )}
         </div>
+        {showVolumeControl && isMuted && (
+          <div className="relative right-0 mr-4 mt-4">
+            <div className="bg-black border-2 border-white text-white p-2 mt-1 rounded-full transition z-10">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                className="w-16 h-2 bg-black"
+                onChange={handleVolumeChange}
+              />
+            </div>
+          </div>
+        )}
       </div>
       <Suspense
         fallback={

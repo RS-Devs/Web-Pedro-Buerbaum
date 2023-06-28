@@ -1,11 +1,12 @@
 import bgImg from "./assets/img/bgImg.png";
+import "./BackgroundVideo.css";
 
 const BackgroundVideo = () => {
-  
-    
-
   return (
-    <img src={bgImg} alt="" className="fixed bottom-0 top-0 left-0 w-full h-full object-cover z-0 " />
+    <div className="background-video-container">
+      <img src={bgImg} alt="" className="background-image" />
+      <div className="fire-embers"></div>
+    </div>
   );
 };
 
