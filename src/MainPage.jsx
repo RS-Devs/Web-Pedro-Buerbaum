@@ -36,11 +36,11 @@ const MainPage = () => {
         <img
           src={pedro}
           alt="Foto de Pedro Buerbaum"
-          className={`w-48 mb-14 md:w-64 lg:w-80 h-auto rounded-full animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow ${
+          className={`w-48 mb-14 md:w-64 lg:w-80 h-auto rounded-full animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slow ${
             videoLoaded ? "" : "hidden"
           }`}
         />
-        <h1 className={`text-3xl mb-10 bg-black sm:text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-3s animate__slow ${
+        <h1 className={`text-3xl mb-10 bg-black sm:text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInDown animate__delay-2s animate__slow ${
             videoLoaded ? "" : "hidden"
           }`}>
           Pedro Buerbaum
@@ -48,7 +48,7 @@ const MainPage = () => {
 
         <button
           onClick={openModal}
-          className={`bg-white text-black font-bold py-2 mb-6 px-4 rounded-full border-4 border-gray-900 animate__animated animate__fadeInDown animate__delay-4s animate__slow hover:bg-gray-900 hover:text-white hover:border-white ${
+          className={`bg-white text-black font-bold py-2 mb-6 px-4 rounded-full border-4 border-gray-900 animate__animated animate__fadeInDown animate__delay-3s animate__slow hover:bg-gray-900 hover:text-white hover:border-white ${
             videoLoaded ? "" : "hidden"
           }`}
         >

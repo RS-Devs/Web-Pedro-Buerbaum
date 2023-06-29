@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { FaVolumeMute, FaVolumeUp, FaChevronDown } from "react-icons/fa";
 import audioFile from "./assets/audio/audio.mp3";
 
@@ -14,6 +14,21 @@ const App = () => {
   const [showButtons, setShowButtons] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [showVolumeControl, setShowVolumeControl] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowButtons(false);
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -43,9 +58,12 @@ const App = () => {
 
   return (
     <div className="bg-transparent h-screen overflow-hidden relative">
-      <div className="flex flex-col items-end absolute top-0 right-0 z-50 animate__animated animate__fadeIn animate__fadeInRight animate__delay-5s animate__slow">
+      <div
+        className="flex flex-col items-end absolute top-0 right-0 z-50 animate__animated animate__fadeIn animate__fadeInRight animate__delay-4s animate__slow"
+        ref={menuRef}
+      >
         <button
-          className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:border-black mr-4 mt-4"
+          className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:font-bold hover:border-black mr-4 mt-4"
           onClick={handleMenuToggle}
         >
           Menu
@@ -59,10 +77,13 @@ const App = () => {
           </button>
           {isMuted && (
             <div className="relative top-3 right-0 ">
-              <FaChevronDown
-                size={20}
-                onClick={handleVolumeIconClick}
-              />
+              <button className="p-1 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:border-black">
+                <FaChevronDown
+                  size={20}
+                  onClick={handleVolumeIconClick}
+                  className=" rounded-full text-white hover:text-black"
+                />
+              </button>
             </div>
           )}
         </div>
@@ -77,7 +98,7 @@ const App = () => {
           }`}
         >
           {showButtons && (
-            <>
+            <div className="absolute top-0 right-0 mt-4 mr-4 flex flex-col space-y-4 z-10">
               <button
                 className={`p-2 rounded-full ${
                   currentPage === "main"
@@ -118,7 +139,7 @@ const App = () => {
               >
                 Contacto
               </button>
-            </>
+            </div>
           )}
         </div>
         {showVolumeControl && isMuted && (
