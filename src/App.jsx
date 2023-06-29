@@ -63,7 +63,7 @@ const App = () => {
         ref={menuRef}
       >
         <button
-          className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:font-bold hover:border-black mr-4 mt-4"
+          className="p-2 rounded-full font-bold bg-white border-3 border-black text-black hover:bg-black hover:text-white hover:font-bold hover:border-white mr-4 mt-4"
           onClick={handleMenuToggle}
           aria-label="Menú"
         >
@@ -71,7 +71,7 @@ const App = () => {
         </button>
         <div className="relative">
           <button
-            className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:border-black mr-4 mt-4"
+            className="p-2 rounded-full bg-white border-3 border-black text-black hover:bg-black hover:text-white hover:border-white mr-4 mt-4"
             onClick={handleVolumeControlToggle}
             aria-label="Musica Muteada"
           >
@@ -79,11 +79,11 @@ const App = () => {
           </button>
           {isMuted && (
             <div className="relative top-3 right-0 ">
-              <button className="p-1 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:border-black">
+              <button className="p-1 rounded-full bg-white  text-black hover:bg-black hover:text-white ">
                 <FaChevronDown
                   size={20}
                   onClick={handleVolumeIconClick}
-                  className=" rounded-full text-white hover:text-black"
+                  className=" rounded-full "
                   aria-label="Desplegar control de volumen"
 
                 />
@@ -156,13 +156,13 @@ const App = () => {
         </div>
         {showVolumeControl && isMuted && (
           <div className="relative right-0 mr-4 mt-4">
-            <div className="bg-black border-2 border-white text-white p-2 mt-1 rounded-full transition z-10">
+            <div className="bg-white border-3 border-black text-black p-2 mt-1 rounded-full transition z-10">
               <input
                 type="range"
                 min="0"
                 max="100"
                 step="1"
-                className="w-16 h-2 bg-black"
+                className="w-16 h-2 "
                 onChange={handleVolumeChange}
                 aria-label="Control de volumen"
 
