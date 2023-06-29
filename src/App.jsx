@@ -65,6 +65,7 @@ const App = () => {
         <button
           className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:font-bold hover:border-black mr-4 mt-4"
           onClick={handleMenuToggle}
+          aria-label="Menú"
         >
           Menu
         </button>
@@ -72,6 +73,7 @@ const App = () => {
           <button
             className="p-2 rounded-full bg-black border-2 border-white text-white hover:bg-white hover:text-black hover:border-black mr-4 mt-4"
             onClick={handleVolumeControlToggle}
+            aria-label="Musica Muteada"
           >
             {isMuted ? <FaVolumeUp size={20} /> : <FaVolumeMute size={20} />}
           </button>
@@ -82,6 +84,8 @@ const App = () => {
                   size={20}
                   onClick={handleVolumeIconClick}
                   className=" rounded-full text-white hover:text-black"
+                  aria-label="Desplegar control de volumen"
+
                 />
               </button>
             </div>
@@ -106,6 +110,8 @@ const App = () => {
                     : "bg-white text-black border-2 border-black"
                 } hover:bg-black hover:text-white hover:border-black`}
                 onClick={() => handlePageChange("main")}
+                aria-label="Presentación"
+
               >
                 Presentación
               </button>
@@ -116,6 +122,8 @@ const App = () => {
                     : "bg-white text-black border-2 border-black"
                 } hover:bg-black hover:text-white hover:border-black`}
                 onClick={() => handlePageChange("projects")}
+                aria-label="Proyectos"
+
               >
                 Proyectos
               </button>
@@ -126,6 +134,8 @@ const App = () => {
                     : "bg-white text-black border-2 border-black"
                 } hover:bg-black hover:text-white hover:border-black`}
                 onClick={() => handlePageChange("socialMedia")}
+                aria-label="Redes"
+
               >
                 Redes
               </button>
@@ -136,6 +146,8 @@ const App = () => {
                     : "bg-white text-black border-2 border-black"
                 } hover:bg-black hover:text-white hover:border-black`}
                 onClick={() => handlePageChange("contact")}
+                aria-label="Contacto"
+
               >
                 Contacto
               </button>
@@ -152,6 +164,8 @@ const App = () => {
                 step="1"
                 className="w-16 h-2 bg-black"
                 onChange={handleVolumeChange}
+                aria-label="Control de volumen"
+
               />
             </div>
           </div>
