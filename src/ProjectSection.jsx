@@ -149,7 +149,7 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower cursor-pointer"
-            onClick={openModal}
+            onClick={openModal} aria-label="Ver Proyecto"
           />
         </div>
 
@@ -159,14 +159,14 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower" />
+            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower" aria-label="Instagram"/>
           </a>
           <a
             href="https://lapolleriaoriginal.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower" />
+            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower" aria-label="Ver Web" />
           </a>
         </div>
       </div>
@@ -196,7 +196,7 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower cursor-pointer"
-            onClick={openSecondModal}
+            onClick={openSecondModal} aria-label="Ver Proyecto"
           />
         </div>
 
@@ -206,14 +206,14 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower" />
+            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower" aria-label="Instagram" />
           </a>
           <a
             href="https://lapolleriaoriginal.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower" />
+            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower" aria-label="Ver Web" />
           </a>
         </div>
       </div>
@@ -243,7 +243,7 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower cursor-pointer"
-            onClick={openThirdModal}
+            onClick={openThirdModal} aria-label="Ver Proyecto"
           />
         </div>
 
@@ -253,14 +253,14 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower" />
+            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower" aria-label="Instagram" />
           </a>
           <a
             href="https://www.thecockery.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower" />
+            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower" aria-label="Ver Web" />
           </a>
         </div>
       </div>
@@ -289,7 +289,7 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower cursor-pointer"
-            onClick={openFourthModal}
+            onClick={openFourthModal} aria-label="Ver Proyecto"
           />
         </div>
 
@@ -299,14 +299,14 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower" />
+            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower" aria-label="Instagram" />
           </a>
           <a
             href="https://fulkonsvp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower" />
+            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower" aria-label="Ver Web" />
           </a>
         </div>
       </div>
@@ -334,7 +334,7 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower cursor-pointer"
-            onClick={openFifthModal}
+            onClick={openFifthModal} aria-label="Ver Proyecto"
           />
         </div>
 
@@ -344,14 +344,14 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" />
+            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" aria-label="Instagram" />
           </a>
           <a
             href="https://www.youtube.com/channel/UCuDm45jKrsTeEpx7BayVaiw"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaYoutube className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" />
+            <FaYoutube className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"aria-label="Ver en Youtube" />
           </a>
         </div>
       </div>
@@ -377,7 +377,7 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower cursor-pointer"
-            onClick={openSixthModal}
+            onClick={openSixthModal} aria-label="Ver Proyecto"
           />
         </div>
 
@@ -399,7 +399,7 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" />
+            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" aria-label="Instagram" />
           </a>
 
           <a
@@ -407,7 +407,7 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" />
+            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" aria-label="Ver Web" />
           </a>
         </div>
       </div>
@@ -475,7 +475,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-pink-500 hover:text-pink-700"
             >
-              <FaEye className="inline-block w-7 h-7 mr-2"></FaEye>
+              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ubicaciones"></FaEye>
               Ver Ubicaciones
             </a>
           </div>
@@ -538,7 +538,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-700 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2"></FaEye>
+              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ubicaciones"></FaEye>
               Ver Ubicaciones
             </a>
           </div>
@@ -602,7 +602,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-pink-700 hover:text-pink-900 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2"></FaEye>
+              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ubicaciones"></FaEye>
               Ver Ubicaciones
             </a>
           </div>
@@ -663,7 +663,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2"></FaEye>
+              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Tienda Online"></FaEye>
               Ver Tienda
             </a>
           </div>
@@ -729,7 +729,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 mr-4"
             >
-              <FaEye className="inline-block w-7 h-7 mr-2"></FaEye>
+              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ver Podcast"></FaEye>
               Ver Podcast
             </a>
             <a
@@ -738,7 +738,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 "
             >
-              <FaVolumeUp className="inline-block w-7 h-7 mr-2"></FaVolumeUp>
+              <FaVolumeUp className="inline-block w-7 h-7 mr-2" aria-label="Escuchar Podcast"></FaVolumeUp>
               Escuchar Podcast
             </a>
           </div>
@@ -800,7 +800,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2"></FaEye>
+              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ver Evento"></FaEye>
               Ver Evento
             </a>
           </div>

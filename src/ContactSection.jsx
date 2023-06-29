@@ -176,7 +176,7 @@ const ContactSection = () => {
           <div className="text-center animate__animated animate__fadeInDown animate__delay-5s animate__slow">
             <button
               type="submit"
-              className="bg-gray-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full"
+              className="bg-gray-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full" aria-label="Enviar"
             >
               Enviar
             </button>

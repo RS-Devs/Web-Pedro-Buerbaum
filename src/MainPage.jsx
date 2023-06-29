@@ -50,7 +50,7 @@ const MainPage = () => {
           onClick={openModal}
           className={`bg-white text-black font-bold py-2 mb-6 px-4 rounded-full border-4 border-gray-900 animate__animated animate__fadeInDown animate__delay-3s animate__slow hover:bg-gray-900 hover:text-white hover:border-white ${
             videoLoaded ? "" : "hidden"
-          }`}
+          }`} aria-label="Conóceme"
         >
           Conóceme
         </button>

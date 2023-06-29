@@ -3,6 +3,7 @@ import "./BackgroundVideo.css";
 
 const BackgroundVideo = () => {
   return (
+    
     <div className="background-video-container">
       <img src={bgImg} alt="" className="background-image" />
       <div className="fire-embers"></div>

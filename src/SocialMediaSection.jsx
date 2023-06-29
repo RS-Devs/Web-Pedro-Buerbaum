@@ -33,6 +33,7 @@ const SocialMediaSection = () => {
               href="https://www.youtube.com/@PedroBuerbaum"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Suscribirse en Youtube"
             >
               @PedroBuerbaum
             </a>
@@ -45,6 +46,7 @@ const SocialMediaSection = () => {
                 href="https://www.youtube.com/@PedroBuerbaum"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Suscribirse en Youtube"
               >
                 Suscribirse
               </a>
@@ -67,6 +69,7 @@ const SocialMediaSection = () => {
               href="https://www.instagram.com/worldcast_/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Seguir en Instagram"
             >
               @worldcast_
             </a>
@@ -79,6 +82,7 @@ const SocialMediaSection = () => {
                 href="https://linktr.ee/worldcast"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Escuchar Podcast"
               >
                 Escuchar
               </a>
@@ -101,6 +105,7 @@ const SocialMediaSection = () => {
               href="https://www.instagram.com/pedrobuerbaum"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Seguir en Instagram"
             >
               @pedrobuerbaum
             </a>
@@ -113,6 +118,7 @@ const SocialMediaSection = () => {
                 href="https://www.instagram.com/pedrobuerbaum"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Seguir en Instagram"
               >
                 Seguir
               </a>
@@ -135,6 +141,7 @@ const SocialMediaSection = () => {
               href="https://www.tiktok.com/@pedrobuerbaum"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Seguir en TikTok"
             >
               @pedrobuerbaum
             </a>
@@ -146,6 +153,7 @@ const SocialMediaSection = () => {
                 href="https://www.tiktok.com/@pedrobuerbaum"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Seguir en TikTok"
               >
                 Seguir
               </a>
