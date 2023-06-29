@@ -1,4 +1,4 @@
-import bgImg from "./assets/img/bgImg.png";
+import bgImg from "./assets/img/bgImg.webp";
 import "./BackgroundVideo.css";
 
 const BackgroundVideo = () => {

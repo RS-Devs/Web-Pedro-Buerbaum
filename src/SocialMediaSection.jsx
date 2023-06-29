@@ -2,8 +2,8 @@ import BackgroundVideo from "./BackgroundVideo";
 import { FaYoutube, FaPodcast, FaInstagram, FaTiktok } from "react-icons/fa";
 import "animate.css";
 
-import pedro from "./assets/img/social-media/pedro.png";
-import worldcast from "./assets/img/social-media/worldcast.png";
+import pedro from "./assets/img/social-media/pedro.webp";
+import worldcast from "./assets/img/social-media/worldcast.webp";
 
 const SocialMediaSection = () => {
   return (

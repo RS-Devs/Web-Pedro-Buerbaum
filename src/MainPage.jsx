@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import pedro from "./assets/img/pedro.png";
-import pedroSmoke from "./assets/img/pedroSmoke.png";
+import pedroSmoke from "./assets/img/pedroSmoke.webp";
 import "animate.css";
 import BackgroundVideo from "./BackgroundVideo";
 
