@@ -563,7 +563,7 @@ const ProjectsSection = () => {
               onClick={closeThirdModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" />
+              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
               The Cockery
@@ -627,7 +627,7 @@ const ProjectsSection = () => {
               onClick={closeFourthModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" />
+              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">FULKON</h2>
             <img
@@ -688,7 +688,7 @@ const ProjectsSection = () => {
               onClick={closeFifthModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" />
+              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">WORLDCA$T</h2>
             <img
@@ -763,7 +763,7 @@ const ProjectsSection = () => {
               onClick={closeSixthModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" />
+              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">0.0 Origen</h2>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">

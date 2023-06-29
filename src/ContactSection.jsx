@@ -122,7 +122,7 @@ const ContactSection = () => {
         <div className="flex flex-col items-center justify-center mb-8 ">
           <img
             src={contact}
-            alt="Imagen de contacto"
+            alt="Imagen de contacto Pedro en la costa"
             className="w-48 h-48 rounded-full border-4 border-white animate__animated animate__fadeInDown  animate__slow"
           />
         </div>

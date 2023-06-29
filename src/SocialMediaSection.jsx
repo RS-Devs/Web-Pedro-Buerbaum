@@ -24,7 +24,7 @@ const SocialMediaSection = () => {
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slow"
             src={pedro}
-            alt="Youtube"
+            alt="Imagen Youtube"
           />
           <FaYoutube className="text-white text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-1s animate__slower" />
           <div className="text-center">
@@ -60,7 +60,7 @@ const SocialMediaSection = () => {
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-2s animate__slow"
             src={worldcast}
-            alt="Podcast"
+            alt="Logo Podcast"
           />
           <FaPodcast className="text-white text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-3s animate__slow" />
           <div className="text-center">
@@ -96,7 +96,7 @@ const SocialMediaSection = () => {
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-3s animate__slow"
             src={pedro}
-            alt="Instagram"
+            alt="Imagen Instagram"
           />
           <FaInstagram className="text-white text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-4s animate__slow" />
           <div className="text-center">
@@ -132,7 +132,7 @@ const SocialMediaSection = () => {
           <img
             className="w-20 h-20 rounded-full mb-4 border-2 border-black animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s"
             src={pedro}
-            alt="TikTok"
+            alt="Imagen TikTok"
           />
           <FaTiktok className="text-black text-4xl mb-4 animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow" />
           <div className="text-center">

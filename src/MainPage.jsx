@@ -72,7 +72,7 @@ const MainPage = () => {
                 <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-white">
                   <img
                     src={pedroSmoke}
-                    alt="Pedro"
+                    alt="Foto de Pedro"
                     className="w-full h-full object-cover"
                   />
                 </div>
