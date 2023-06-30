@@ -6,7 +6,7 @@ import {
   FaEye,
   FaVolumeUp,
   FaVolumeMute,
-  FaTicketAlt
+  FaTicketAlt,
 } from "react-icons/fa";
 
 import BackgroundVideo from "./BackgroundVideo";
@@ -25,20 +25,16 @@ import fulkon2 from "./assets/img/modals/fulkon2.webp";
 import worldcast2 from "./assets/img/modals/worldcast2.webp";
 import VideoPedroBuerbaum from "./assets/video/modal/VideoPedroBuerbaum.mp4";
 
-
 import CasusBelli from "./assets/img/modals/CasusBelli.webp";
 import NoSuspires from "./assets/img/modals/nosuspires.png";
 import VideoEvent from "./assets/video/modal/VideoEvent.mp4";
 
-
 import cerrar from "./assets/img/modals/icons/cerrar.webp";
 
 import "animate.css";
-import { useState, useRef } from 'react';
+import { useState, useRef } from "react";
 
 import VideoPlayer from "./VideoPlayer";
-
-
 
 const ProjectsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,7 +53,6 @@ const ProjectsSection = () => {
   const [isClosingSixthModal, setIsClosingSixthModal] = useState(false);
   const [isClosingSeventhModal, setIsClosingSeventhModal] = useState(false);
 
-
   const [isAudioMuted, setIsAudioMuted] = useState(true);
   const videoRef = useRef(null);
 
@@ -68,9 +63,6 @@ const ProjectsSection = () => {
       setIsAudioMuted(!isAudioMuted);
     }
   };
-
-
-
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -451,13 +443,20 @@ const ProjectsSection = () => {
           personal. ¡No te quedes fuera de ningún evento ni campamento! Las
           plazas son limitadas. Únete a nuestro Instagram para mantenerte
           actualizado y no perderte ninguna oportunidad. ¡Importante! Sígueme en
-          <span><a 
-          className="text-black hover:underline "
-          href="https://www.instagram.com/pedrobuerbaum"
+          <span>
+            <a
+              className="text-black hover:underline "
+              href="https://www.instagram.com/pedrobuerbaum"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Seguir en Instagram"> @PedroBuerbaum </a></span>  para estar al tanto de todas las novedades y asegurar
-          tu participación en nuestros emocionantes eventos. ¡Te esperamos!
+              aria-label="Seguir en Instagram"
+            >
+              {" "}
+              @PedroBuerbaum{" "}
+            </a>
+          </span>{" "}
+          para estar al tanto de todas las novedades y asegurar tu participación
+          en nuestros emocionantes eventos. ¡Te esperamos!
         </p>
 
         <div>
@@ -470,12 +469,29 @@ const ProjectsSection = () => {
 
         <div className="flex mt-4">
           <a
-            href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
+            href="https://www.instagram.com/pedrobuerbaum/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" />
+            <FaInstagram
+              className="text-3xl mr-4 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
+              aria-label="Instagram"
+            />
+            <span className="text-center">Pedro</span>
           </a>
+          <a
+            href="https://www.instagram.com/magecmoreau/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
+              aria-label="Instagram"
+            />
+            <span className="text-center">Magec</span>
+          </a>
+
+          
 
           <p className=" mr-2 font-extrabold text-2xl animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower">
             ||
@@ -909,6 +925,21 @@ const ProjectsSection = () => {
                 mundo de posibilidades.
               </p>
 
+
+              <a
+            href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-gray-900 "
+
+          >
+            <FaGlobe className="inline-block w-7 h-7 mr-2" />
+          </a>
+
+          <p className=" inline-block w-7 h-7 mr-2 font-extrabold text-2xl ">
+            ||
+          </p>
+
               <a
                 href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
                 target="_blank"
@@ -974,7 +1005,6 @@ const ProjectsSection = () => {
                   style={{ maxWidth: "400px" }}
                 />
 
-                
                 <p className="mb-2 mx-auto sm:text-center">
                   ¡Networking, presentación del bootcamp y mucho más!
                 </p>
@@ -1010,17 +1040,16 @@ const ProjectsSection = () => {
                 </p>
 
                 <video
-        ref={videoRef}
-        src={VideoEvent}
-        autoPlay
-        muted={isAudioMuted}
-        loop
-        className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-40"
-      />
-      <button onClick={toggleAudio}>
-        {isAudioMuted ? <FaVolumeMute/> : <FaVolumeUp/>}
-      </button>
-
+                  ref={videoRef}
+                  src={VideoEvent}
+                  autoPlay
+                  muted={isAudioMuted}
+                  loop
+                  className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-40"
+                />
+                <button onClick={toggleAudio}>
+                  {isAudioMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+                </button>
 
                 <p className="mb-2 mx-auto sm:text-center">
                   ¡Te esperamos en Madrid el 6 de julio de 2023!
