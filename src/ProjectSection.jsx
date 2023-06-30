@@ -490,13 +490,9 @@ const ProjectsSection = () => {
             />
             <span className="text-center">Magec</span>
           </a>
-
-          
-
           <p className=" mr-2 font-extrabold text-2xl animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower">
             ||
           </p>
-
           <a
             href="https://www.instagram.com/_skillhunting/"
             target="_blank"
@@ -506,8 +502,9 @@ const ProjectsSection = () => {
               className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
               aria-label="Instagram"
             />
+            Skill
           </a>
-
+          
           <a
             href="https://www.skillhunting.es"
             target="_blank"
@@ -517,7 +514,9 @@ const ProjectsSection = () => {
               className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
               aria-label="Ver Web"
             />
+            Hunting
           </a>
+
         </div>
       </div>
 
@@ -925,20 +924,18 @@ const ProjectsSection = () => {
                 mundo de posibilidades.
               </p>
 
-
               <a
-            href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-gray-900 "
+                href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-gray-900 "
+              >
+                <FaGlobe className="inline-block w-7 h-7 mr-2" />
+              </a>
 
-          >
-            <FaGlobe className="inline-block w-7 h-7 mr-2" />
-          </a>
-
-          <p className=" inline-block w-7 h-7 mr-2 font-extrabold text-2xl ">
-            ||
-          </p>
+              <p className=" inline-block w-7 h-7 mr-2 font-extrabold text-2xl ">
+                ||
+              </p>
 
               <a
                 href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
