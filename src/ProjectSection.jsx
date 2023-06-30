@@ -5,6 +5,8 @@ import {
   FaArrowRight,
   FaEye,
   FaVolumeUp,
+  FaVolumeMute,
+  FaTicketAlt
 } from "react-icons/fa";
 
 import BackgroundVideo from "./BackgroundVideo";
@@ -14,7 +16,7 @@ import laconeria from "./assets/img/projects/laconeria.webp";
 import thecockery from "./assets/img/projects/thecockery.webp";
 import fulkon from "./assets/img/projects/fulkon.webp";
 import worldcast from "./assets/img/projects/worldcast.webp";
-import Origen from "./assets/img/projects/Origen.webp";
+import nosuspires from "./assets/img/projects/nosuspires.webp";
 
 import lapolleria2 from "./assets/img/modals/lapolleria2.webp";
 import laconeria2 from "./assets/img/modals/laconeria2.webp";
@@ -23,12 +25,20 @@ import fulkon2 from "./assets/img/modals/fulkon2.webp";
 import worldcast2 from "./assets/img/modals/worldcast2.webp";
 import VideoPedroBuerbaum from "./assets/video/modal/VideoPedroBuerbaum.mp4";
 
+
+import CasusBelli from "./assets/img/modals/CasusBelli.webp";
+import NoSuspires from "./assets/img/modals/nosuspires.png";
+import VideoEvent from "./assets/video/modal/VideoEvent.mp4";
+
+
 import cerrar from "./assets/img/modals/icons/cerrar.webp";
 
 import "animate.css";
-import { useState } from "react";
+import { useState, useRef } from 'react';
 
 import VideoPlayer from "./VideoPlayer";
+
+
 
 const ProjectsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,6 +47,7 @@ const ProjectsSection = () => {
   const [isFourthModalOpen, setIsFourthModalOpen] = useState(false);
   const [isFifthModalOpen, setIsFifthModalOpen] = useState(false);
   const [isSixthModalOpen, setIsSixthModalOpen] = useState(false);
+  const [isSeventhModalOpen, setIsSeventhModalOpen] = useState(false);
 
   const [isClosingModal, setIsClosingModal] = useState(false);
   const [isClosingSecondModal, setIsClosingSecondModal] = useState(false);
@@ -44,6 +55,22 @@ const ProjectsSection = () => {
   const [isClosingFourthModal, setIsClosingFourthModal] = useState(false);
   const [isClosingFifthModal, setIsClosingFifthModal] = useState(false);
   const [isClosingSixthModal, setIsClosingSixthModal] = useState(false);
+  const [isClosingSeventhModal, setIsClosingSeventhModal] = useState(false);
+
+
+  const [isAudioMuted, setIsAudioMuted] = useState(true);
+  const videoRef = useRef(null);
+
+  const toggleAudio = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !isAudioMuted;
+      setIsAudioMuted(!isAudioMuted);
+    }
+  };
+
+
+
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -117,6 +144,18 @@ const ProjectsSection = () => {
     }, 1000);
   };
 
+  const openSeventhModal = () => {
+    setIsSeventhModalOpen(true);
+  };
+
+  const closeSeventhModal = () => {
+    setIsClosingSeventhModal(true);
+    setTimeout(() => {
+      setIsSeventhModalOpen(false);
+      setIsClosingSeventhModal(false);
+    }, 1000);
+  };
+
   return (
     <div
       className="py-8 min-h-screen pt-14 grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-10 lg:px-20 relative"
@@ -149,7 +188,8 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower cursor-pointer"
-            onClick={openModal} aria-label="Ver Proyecto"
+            onClick={openModal}
+            aria-label="Ver Proyecto"
           />
         </div>
 
@@ -159,14 +199,20 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower" aria-label="Instagram"/>
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower"
+              aria-label="Instagram"
+            />
           </a>
           <a
             href="https://lapolleriaoriginal.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower" aria-label="Ver Web" />
+            <FaGlobe
+              className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-1s animate__slower"
+              aria-label="Ver Web"
+            />
           </a>
         </div>
       </div>
@@ -196,7 +242,8 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower cursor-pointer"
-            onClick={openSecondModal} aria-label="Ver Proyecto"
+            onClick={openSecondModal}
+            aria-label="Ver Proyecto"
           />
         </div>
 
@@ -206,14 +253,20 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower" aria-label="Instagram" />
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower"
+              aria-label="Instagram"
+            />
           </a>
           <a
             href="https://lapolleriaoriginal.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower" aria-label="Ver Web" />
+            <FaGlobe
+              className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-2s animate__slower"
+              aria-label="Ver Web"
+            />
           </a>
         </div>
       </div>
@@ -243,7 +296,8 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower cursor-pointer"
-            onClick={openThirdModal} aria-label="Ver Proyecto"
+            onClick={openThirdModal}
+            aria-label="Ver Proyecto"
           />
         </div>
 
@@ -253,14 +307,20 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower" aria-label="Instagram" />
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower"
+              aria-label="Instagram"
+            />
           </a>
           <a
             href="https://www.thecockery.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower" aria-label="Ver Web" />
+            <FaGlobe
+              className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-3s animate__slower"
+              aria-label="Ver Web"
+            />
           </a>
         </div>
       </div>
@@ -289,7 +349,8 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower cursor-pointer"
-            onClick={openFourthModal} aria-label="Ver Proyecto"
+            onClick={openFourthModal}
+            aria-label="Ver Proyecto"
           />
         </div>
 
@@ -299,14 +360,20 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower" aria-label="Instagram" />
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower"
+              aria-label="Instagram"
+            />
           </a>
           <a
             href="https://fulkonsvp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower" aria-label="Ver Web" />
+            <FaGlobe
+              className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-4s animate__slower"
+              aria-label="Ver Web"
+            />
           </a>
         </div>
       </div>
@@ -334,7 +401,8 @@ const ProjectsSection = () => {
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower cursor-pointer"
-            onClick={openFifthModal} aria-label="Ver Proyecto"
+            onClick={openFifthModal}
+            aria-label="Ver Proyecto"
           />
         </div>
 
@@ -344,40 +412,59 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" aria-label="Instagram" />
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
+              aria-label="Instagram"
+            />
           </a>
           <a
             href="https://www.youtube.com/channel/UCuDm45jKrsTeEpx7BayVaiw"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaYoutube className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"aria-label="Ver en Youtube" />
+            <FaYoutube
+              className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
+              aria-label="Ver en Youtube"
+            />
           </a>
         </div>
       </div>
       <div className="bg-gray-600 border-2 text-white border-white rounded-lg p-6 flex flex-col justify-center items-center project-card animate__animated animate__fadeIn animate__fadeInRight animate__delay-5s  animate__slow">
         <img
-          src={Origen}
+          src={nosuspires}
           alt="NO SUSPIRES"
           className="w-24 h-24 rounded-full mb-4 border-2 border-white animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow"
         />
         <h3 className="text-xl font-bold mb-2 animate__animated animate__fadeIn animate__fadeInDown animate__delay-5s animate__slow">
-          0.0 Origen (ft. Magec). NO SUSPIRES. powered by Skill Hunting
+          Pedro Buerbaum ft. Magec. NO SUSPIRES. powered by Skill Hunting
         </h3>
         <p className="text-justify animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slow">
-          0.0 Origen desafía la comodidad y la virtualidad de nuestro mundo
-          actual, invitándonos a salir de nuestra zona de confort y enfrentar
-          los desafíos reales. Su evento de networking en Tenerife el 18 de
-          junio de 2023, con la presencia de Magec y la dirección de Pedro,
-          promete ser memorable y lleno de sorpresas. 0.0 Origen nos desafía a
-          tomar el control de nuestras vidas y ser protagonistas de nuestra
-          propia historia.
+          Descubre Varios Campamentos y Networkings organizados por Pedro
+          Buerbaum en colaboración con Magec y con el respaldo de Skill Hunting.
+          Desafían la comodidad y virtualidad del mundo actual, invitándonos a
+          salir de nuestra zona de confort y enfrentar desafíos reales. Bajo la
+          dirección de Pedro, estos eventos prometen ser memorables y
+          sorprendentes. Conecta con personas inspiradoras y expertas en
+          Tenerife, el 18 de junio de 2023, en un evento de networking. Toma el
+          control de tu vida y sé protagonista de tu propia historia. Únete a
+          nosotros y descubre nuevas oportunidades de crecimiento y desarrollo
+          personal. ¡No te quedes fuera de ningún evento ni campamento! Las
+          plazas son limitadas. Únete a nuestro Instagram para mantenerte
+          actualizado y no perderte ninguna oportunidad. ¡Importante! Sígueme en
+          <span><a 
+          className="text-black hover:underline "
+          href="https://www.instagram.com/pedrobuerbaum"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Seguir en Instagram"> @PedroBuerbaum </a></span>  para estar al tanto de todas las novedades y asegurar
+          tu participación en nuestros emocionantes eventos. ¡Te esperamos!
         </p>
 
         <div>
           <FaArrowRight
             className="text-3xl mt-5 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower cursor-pointer"
-            onClick={openSixthModal} aria-label="Ver Proyecto"
+            onClick={openSixthModal}
+            aria-label="Ver Proyecto"
           />
         </div>
 
@@ -399,7 +486,10 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" aria-label="Instagram" />
+            <FaInstagram
+              className="text-3xl mr-2 icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
+              aria-label="Instagram"
+            />
           </a>
 
           <a
@@ -407,7 +497,10 @@ const ProjectsSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower" aria-label="Ver Web" />
+            <FaGlobe
+              className="text-3xl icon-card animate__animated animate__fadeIn animate__fadeInUp animate__delay-5s animate__slower"
+              aria-label="Ver Web"
+            />
           </a>
         </div>
       </div>
@@ -475,7 +568,10 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-pink-500 hover:text-pink-700"
             >
-              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ubicaciones"></FaEye>
+              <FaEye
+                className="inline-block w-7 h-7 mr-2"
+                aria-label="Ubicaciones"
+              ></FaEye>
               Ver Ubicaciones
             </a>
           </div>
@@ -538,7 +634,10 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-700 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ubicaciones"></FaEye>
+              <FaEye
+                className="inline-block w-7 h-7 mr-2"
+                aria-label="Ubicaciones"
+              ></FaEye>
               Ver Ubicaciones
             </a>
           </div>
@@ -563,7 +662,7 @@ const ProjectsSection = () => {
               onClick={closeThirdModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
+              <img src={cerrar} className="h-7 w-7" alt="cerrar" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
               The Cockery
@@ -602,7 +701,10 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-pink-700 hover:text-pink-900 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ubicaciones"></FaEye>
+              <FaEye
+                className="inline-block w-7 h-7 mr-2"
+                aria-label="Ubicaciones"
+              ></FaEye>
               Ver Ubicaciones
             </a>
           </div>
@@ -627,7 +729,7 @@ const ProjectsSection = () => {
               onClick={closeFourthModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
+              <img src={cerrar} className="h-7 w-7" alt="cerrar" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">FULKON</h2>
             <img
@@ -663,7 +765,10 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 "
             >
-              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Tienda Online"></FaEye>
+              <FaEye
+                className="inline-block w-7 h-7 mr-2"
+                aria-label="Tienda Online"
+              ></FaEye>
               Ver Tienda
             </a>
           </div>
@@ -688,12 +793,12 @@ const ProjectsSection = () => {
               onClick={closeFifthModal}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
+              <img src={cerrar} className="h-7 w-7" alt="cerrar" />
             </button>
             <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">WORLDCA$T</h2>
             <img
               src={worldcast2}
-              alt="The Cockery"
+              alt="WorldCast"
               className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
               style={{ maxWidth: "400px" }}
             />
@@ -729,7 +834,10 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 mr-4"
             >
-              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ver Podcast"></FaEye>
+              <FaEye
+                className="inline-block w-7 h-7 mr-2"
+                aria-label="Ver Podcast"
+              ></FaEye>
               Ver Podcast
             </a>
             <a
@@ -738,7 +846,10 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-gray-900 "
             >
-              <FaVolumeUp className="inline-block w-7 h-7 mr-2" aria-label="Escuchar Podcast"></FaVolumeUp>
+              <FaVolumeUp
+                className="inline-block w-7 h-7 mr-2"
+                aria-label="Escuchar Podcast"
+              ></FaVolumeUp>
               Escuchar Podcast
             </a>
           </div>
@@ -748,63 +859,188 @@ const ProjectsSection = () => {
       {/******** SIXTH MODAL ********/}
 
       {isSixthModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-10">
-          <div
-            className="bg-gray-900 bg-opacity-50 absolute inset-0"
-            onClick={closeSixthModal}
-          ></div>
-          <div
-            className={`bg-gray-600 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
-              isClosingSixthModal ? "animate__fadeOutDown" : "animate__fadeIn"
-            } animate__fadeInDown animate__slow`}
-            style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
-          >
-            <button
+        <>
+          <div className="fixed inset-0 flex items-center justify-center z-10">
+            <div
+              className="bg-gray-900 bg-opacity-50 absolute inset-0"
               onClick={closeSixthModal}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            ></div>
+            <div
+              className={`bg-gray-600 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+                isClosingSixthModal ? "animate__fadeOutDown" : "animate__fadeIn"
+              } animate__fadeInDown animate__slow`}
+              style={{ maxWidth: "90vw", maxHeight: "90vh", overflowY: "auto" }}
             >
-              <img src={cerrar} className="h-7 w-7" alt="cerrar"/>
-            </button>
-            <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">0.0 Origen</h2>
-            <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
-              NO SUSPIRES
-            </h2>
+              <button
+                onClick={closeSixthModal}
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+              >
+                <img src={cerrar} className="h-7 w-7" alt="cerrar" />
+              </button>
+              <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
+                0.0 Origen
+              </h2>
+              <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
+                NO SUSPIRES
+              </h2>
 
-            <VideoPlayer src={VideoPedroBuerbaum} />
+              <VideoPlayer src={VideoPedroBuerbaum} />
 
-            <p className="mb-2 mx-auto sm:text-center">
-              El evento que cambiará tu vida.
-            </p>
-            <p className="mb-4 mx-auto sm:text-justify">
-              0.0 Origen es mucho más que un simple evento de networking. Es una
-              experiencia transformadora que desafía la comodidad y la
-              virtualidad de nuestro mundo actual, invitándonos a salir de
-              nuestra zona de confort y enfrentar los desafíos reales. Con la
-              presencia destacada de Magec y bajo la dirección experta de Pedro,
-              el evento que se llevará a cabo en Tenerife el 18 de junio de 2023
-              promete ser una experiencia inolvidable y llena de sorpresas.
-            </p>
+              <p className="mb-2 mx-auto sm:text-center">
+                El campamento que cambiará tu vida.
+              </p>
+              <p className="mb-4 mx-auto sm:text-justify">
+                0.0 Origen es mucho más que un simple evento de networking. Es
+                una experiencia transformadora que desafía la comodidad y la
+                virtualidad de nuestro mundo actual, invitándonos a salir de
+                nuestra zona de confort y enfrentar los desafíos reales. Con la
+                presencia destacada de Magec y bajo la dirección experta de
+                Pedro, el evento que se llevará a cabo en Tenerife el 18 de
+                junio de 2023 promete ser una experiencia inolvidable y llena de
+                sorpresas.
+              </p>
 
-            <p className="mb-4 mx-auto sm:text-justify">
-              También nos invita a tomar el control de nuestras vidas y
-              convertirnos en protagonistas de nuestra propia historia. A través
-              de actividades interactivas, charlas inspiradoras y conexiones
-              significativas, este evento nos desafía a superar nuestros
-              límites, explorar nuevas oportunidades y abrirnos a un mundo de
-              posibilidades.
-            </p>
+              <p className="mb-4 mx-auto sm:text-justify">
+                También nos invita a tomar el control de nuestras vidas y
+                convertirnos en protagonistas de nuestra propia historia. A
+                través de actividades interactivas, charlas inspiradoras y
+                conexiones significativas, este evento nos desafía a superar
+                nuestros límites, explorar nuevas oportunidades y abrirnos a un
+                mundo de posibilidades.
+              </p>
 
-            <a
-              href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-gray-900 "
-            >
-              <FaEye className="inline-block w-7 h-7 mr-2" aria-label="Ver Evento"></FaEye>
-              Ver Evento
-            </a>
+              <a
+                href="https://www.eventbrite.es/e/entradas-00-origen-ft-magec-648222269257?aff=InstagramPedroBuerbaum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-gray-900 "
+              >
+                <FaEye
+                  className="inline-block w-7 h-7 mr-2"
+                  aria-label="Ver Evento"
+                ></FaEye>
+                Ver Evento
+              </a>
+              <div className="text-3xl mt-5 mr-2 icon-card cursor-pointer float-right">
+                <FaArrowRight
+                  className="text-3xl cursor-pointer mb-5"
+                  onClick={openSeventhModal}
+                  aria-label="Ver Proyecto"
+                />
+              </div>
+            </div>
           </div>
-        </div>
+          {/* ******* SEVENTH MODAL ******* */}
+          {isSeventhModalOpen && (
+            <div className="fixed inset-0 flex items-center justify-center z-10">
+              <div
+                className="bg-gray-900 bg-opacity-50 absolute inset-0"
+                onClick={closeSeventhModal}
+              ></div>
+              <div
+                className={`bg-gray-600 text-white border-2 border-white m-6 rounded-lg relative text-center max-w-3xl mx-6 sm:p-4 animate__animated ${
+                  isClosingSeventhModal
+                    ? "animate__fadeOutDown"
+                    : "animate__fadeIn"
+                } animate__fadeInDown animate__slow`}
+                style={{
+                  maxWidth: "90vw",
+                  maxHeight: "90vh",
+                  overflowY: "auto",
+                }}
+              >
+                <button
+                  onClick={closeSeventhModal}
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                >
+                  <img src={cerrar} className="h-7 w-7" alt="cerrar" />
+                </button>
+                <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
+                  1.0 Casus Belli
+                </h2>
+                <img
+                  src={NoSuspires}
+                  alt="No Suspires"
+                  className="mx-auto mb-4 rounded-full  h-auto border-2 border-white "
+                  style={{ maxWidth: "50px" }}
+                />
+                <h2 className="text-4xl mt-3 font-bold mb-4 mx-auto">
+                  No Suspires{" "}
+                </h2>
+                <img
+                  src={CasusBelli}
+                  alt="1.0 Casus Belli"
+                  className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-full"
+                  style={{ maxWidth: "400px" }}
+                />
+
+                
+                <p className="mb-2 mx-auto sm:text-center">
+                  ¡Networking, presentación del bootcamp y mucho más!
+                </p>
+                <p className="mb-2 mx-auto sm:text-center">
+                  Fecha y hora: Empieza el jueves, 6 de julio de 2023 a las
+                  19:30 (CEST).
+                </p>
+                <p className="mb-2 mx-auto sm:text-center">
+                  Acerca de este evento: Duración: 6 horas. Entrada electrónica
+                  móvil.
+                </p>
+                <p className="mb-4 mx-auto sm:text-justify">
+                  Después de meses de intenso trabajo en las sombras, finalmente
+                  estamos listos para revelar nuestra creación más esperada.
+                  Este evento se llevará a cabo el 6 de julio en Madrid y
+                  promete ser una experiencia transformadora. Únete a nosotros
+                  en esta jornada llena de oportunidades de networking, donde
+                  tendrás la oportunidad de conocer a profesionales destacados
+                  de diversas industrias y establecer conexiones valiosas para
+                  tu futuro.
+                </p>
+
+                <p className="mb-4 mx-auto sm:text-justify">
+                  Además, durante el evento, presentaremos nuestro innovador
+                  bootcamp, diseñado para potenciar tus habilidades y prepararte
+                  para los desafíos del mundo actual. Descubre cómo nuestra
+                  propuesta educativa revolucionará tu carrera y te brindará las
+                  herramientas necesarias para destacar en el mercado. No
+                  pierdas esta oportunidad única. Las plazas son limitadas, así
+                  que asegúrate de reservar tu entrada cuanto antes. Prepárate
+                  para presenciar el levantamiento del velo y ser testigo de un
+                  cambio sin precedentes.
+                </p>
+
+                <video
+        ref={videoRef}
+        src={VideoEvent}
+        autoPlay
+        muted={isAudioMuted}
+        loop
+        className="mx-auto mb-4 rounded-lg max-w-full h-auto border-2 border-white w-40"
+      />
+      <button onClick={toggleAudio}>
+        {isAudioMuted ? <FaVolumeMute/> : <FaVolumeUp/>}
+      </button>
+
+
+                <p className="mb-2 mx-auto sm:text-center">
+                  ¡Te esperamos en Madrid el 6 de julio de 2023!
+                </p>
+                <a
+                  href="https://www.eventbrite.es/e/entradas-10-casus-belli-666006833367"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-gray-900 "
+                >
+                  <FaTicketAlt
+                    className="inline-block w-7 h-7 mr-2"
+                    aria-label="Ver Evento"
+                  ></FaTicketAlt>
+                  Entradas presentacion
+                </a>
+              </div>
+            </div>
+          )}{" "}
+        </>
       )}
     </div>
   );
